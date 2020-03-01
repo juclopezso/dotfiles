@@ -5,17 +5,25 @@ syntax on
 set timeoutlen=1000
 set ttimeoutlen=0
 filetype plugin on
+set list
 
 " colors
-"let g:molokai_original = 1
+let g:molokai_original = 1
 set background=dark
+syntax enable
+"colorscheme solarized
+"let g:solarized_termcolors=256
 colorscheme gruvbox
+autocmd BufEnter *.vue colorscheme monokai 
 "colorscheme molokai 
+"colorscheme monokai 
+
 set laststatus=2
 
 " mappings
 :map <C-n> :NERDTree
-inoremap jj <Esc>
+inoremap kj <Esc>
+cnoremap kj <C-C>
 " CtrlP mapping
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -40,7 +48,7 @@ call plug#begin()
 call plug#end()
 
 "Plugin vue
-let g:vue_pre_processors = ['pug', 'scss']
+"let g:vue_pre_processors = ['pug', 'scss']
 "Plugin crtlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 " sync open file with NERDTree
