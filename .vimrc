@@ -12,6 +12,7 @@ set laststatus=2
 
 " mappings
 :map <C-n> :NERDTree
+inoremap jj <Esc>
 
 " nerdtree
 let NERDTreeMinimalUI = 1
@@ -22,5 +23,6 @@ call plug#begin()
 	Plug 'itchyny/lightline.vim'
 	Plug 'scrooloose/nerdtree'
 	Plug 'scrooloose/syntastic'
+	Plug 'kien/ctrlp.vim'
 	Plug 'ervandew/supertab'
 call plug#end()
