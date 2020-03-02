@@ -33,6 +33,7 @@ let NERDTreeDirArrows = 1
 let g:NERDTreeIgnore = ['^node_modules$']
 " plugins
 call plug#begin()
+	Plug 'morhetz/gruvbox'
 	Plug 'itchyny/lightline.vim'
 	Plug 'scrooloose/nerdtree'
 	Plug 'scrooloose/nerdcommenter'
