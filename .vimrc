@@ -46,6 +46,7 @@ call plug#begin()
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 	Plug 'ryanoasis/vim-devicons'
+	Plug 'vimwiki/vimwiki'
 call plug#end()
 
 "Plugin vue
