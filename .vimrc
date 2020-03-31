@@ -69,9 +69,6 @@ nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
 nnoremap <Leader>l <C-w>l
 
-" SNIPPETS
-nnoremap ,info :-1read $HOME/.vim/.js_info.js<CR>f'a
-
 " FINDING FILES
 set path+=** " search files into subfolder
 set wildignore+=**/node_modules/** " ignore node_modules everywhere
@@ -109,4 +106,11 @@ map <C-n> :NERDTree
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
+
+" SNIPPETS
+autocmd FileType html,js,vue nnoremap ,info :-1read $HOME/.vim/.js_info.js<CR>f'a
+autocmd FileType html,erb,vue nnoremap ,h1 i<h1></h1><Esc>F>a
+autocmd FileType html,erb,vue nnoremap ,h2 i<h2></h2><Esc>F>a
+autocmd FileType html,erb,vue nnoremap ,p i<p></p><Esc>F>a
+autocmd FileType html,erb,vue nnoremap ,b i<b></b><Esc>F>a
 
