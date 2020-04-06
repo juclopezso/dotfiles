@@ -3,14 +3,13 @@
 "COMMENTS
 "To exit out of completion mode with what you originally 
 "typed and stay in insert mode is <C-e>
-"
-"
 set number
 set relativenumber
 set showcmd
+set encoding=utf-8
 
-" set timeoutlen=1000
-" set ttimeoutlen=0
+" force it to use an older regular expression engine that handles ruby syntax better
+set re=1
 " enter the current millenium
 set nocompatible
 " enable syntax and plugins
@@ -55,9 +54,8 @@ set smartindent
 
 " colors
 set background=dark
-"syntax enable
 colorscheme gruvbox
-autocmd BufEnter *.vue colorscheme monokai 
+autocmd BufEnter *.vue colorscheme minimalist
 
 " MAPPINGS
 inoremap kj <Esc>
@@ -84,28 +82,40 @@ command! MakeTags !ctags -R .
 " PLUGINS
  
 call plug#begin()
-" 	Plug 'morhetz/gruvbox'
- 	Plug 'itchyny/lightline.vim'
+    " Plug 'posva/vim-vue'
+    Plug 'leafoftree/vim-vue-plugin'
+    Plug 'jiangmiao/auto-pairs'
+ 	Plug 'vim-airline/vim-airline'
  	Plug 'scrooloose/nerdtree'
-" 	Plug 'scrooloose/nerdcommenter'
-" 	Plug 'scrooloose/syntastic'
-" 	Plug 'ervandew/supertab'
-" 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" 	Plug 'leafgarland/typescript-vim'
-" 	Plug 'posva/vim-vue'
-" 	Plug 'kien/ctrlp.vim'
- 	Plug 'Xuyuanp/nerdtree-git-plugin'
-" 	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-" 	Plug 'ryanoasis/vim-devicons'
-" 	Plug 'vimwiki/vimwiki'
+    Plug 'valloric/youcompleteme'
+ 	Plug 'scrooloose/syntastic'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'majutsushi/tagbar'
+    Plug 'joshdick/onedark.vim'
 call plug#end()
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
 
 " NERDTree
-map <C-n> :NERDTree
+map <C-n> :NERDTree<CR>
 " enable line numbers
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
+
+" Synstastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" vim vue
+let g:vim_vue_plugin_load_full_syntax = 1
+
 
 " SNIPPETS
 autocmd FileType html,js,vue nnoremap ,info :-1read $HOME/.vim/.js_info.js<CR>f'a
