@@ -13,7 +13,6 @@ sudo apt-get update && sudo apt-get install -y \
   ripgrep \
   python3-pip
 
-
 # Create symlinks to various dotfiles
 # NOTE: The last one is WSL 1 / 2 specific. No need to do this on native Linux.
 ln -sf ~/dotfiles/.bashrc ~/.bashrc \
@@ -23,13 +22,18 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc \
   && ln -sf ~/dotfiles/.vimrc ~/.vimrc \
   && sudo ln -sf ~/dotfiles/etc/wsl.conf /etc/wsl.conf
 
-source .bashrc
+# Install Plug for vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # personal ~/.gitconfig.user file
 cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
 
 # Install ASDF 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.8
+
+# reload bashrc
+source .bashrc
 
 # Install Node through ASDF.
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
