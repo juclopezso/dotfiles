@@ -16,13 +16,14 @@ sudo apt-get update && sudo apt-get install -y \
 
 # Create symlinks to various dotfiles
 # NOTE: The last one is WSL 1 / 2 specific. No need to do this on native Linux.
-ln -s ~/dotfiles/.bashrc ~/.bashrc \
-  && ln -s ~/dotfiles/.gitconfig ~/.gitconfig \
-  && ln -s ~/dotfiles/.profile ~/.profile \
-  && ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf \
-  && ln -s ~/dotfiles/.vimrc ~/.vimrc \
-  && sudo ln -s ~/dotfiles/etc/wsl.conf /etc/wsl.conf
+ln -sf ~/dotfiles/.bashrc ~/.bashrc \
+  && ln -sf ~/dotfiles/.gitconfig ~/.gitconfig \
+  && ln -sf ~/dotfiles/.profile ~/.profile \
+  && ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf \
+  && ln -sf ~/dotfiles/.vimrc ~/.vimrc \
+  && sudo ln -sf ~/dotfiles/etc/wsl.conf /etc/wsl.conf
 
+source .bashrc
 
 # personal ~/.gitconfig.user file
 cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
