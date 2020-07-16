@@ -1,3 +1,4 @@
+```sh
 # Software for WSL2
 sudo apt-get update && sudo apt-get install -y \
   vim-gtk \
@@ -54,3 +55,5 @@ git config --list
 # If you're using Docker Desktop with WSL 2, these should be accessible too.
 docker info
 docker-compose --version
+
+```
