@@ -11,7 +11,8 @@ sudo apt-get update && sudo apt-get install -y \
   htop \
   shellcheck \
   ripgrep \
-  python3-pip
+  python3-pip \
+  net-tools 
 
 # Create symlinks to various dotfiles
 # NOTE: The last one is WSL 1 / 2 specific. No need to do this on native Linux.
