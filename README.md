@@ -21,7 +21,7 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc \
   && ln -sf ~/dotfiles/.profile ~/.profile \
   && ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf \
   && ln -sf ~/dotfiles/.vimrc ~/.vimrc \
-  && ln -sf ~/dotfiles/.vim ~/.vim \
+  && cp -R ~/dotfiles/.vim ~/.vim \
   && sudo ln -sf ~/dotfiles/etc/wsl.conf /etc/wsl.conf
 
 # Install Plug for vim
