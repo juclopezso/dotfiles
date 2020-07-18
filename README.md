@@ -20,9 +20,13 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc \
   && ln -sf ~/dotfiles/.gitconfig ~/.gitconfig \
   && ln -sf ~/dotfiles/.profile ~/.profile \
   && ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf \
-  && ln -sf ~/dotfiles/.vimrc ~/.vimrc \
   && cp -R ~/dotfiles/.vim ~/.vim \
   && sudo ln -sf ~/dotfiles/etc/wsl.conf /etc/wsl.conf
+
+# for unix
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
+# for WSL
+ln -sf ~/dotfiles/.vimrc_minimal ~/.vimrc
 
 # Install Plug for vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
