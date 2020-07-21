@@ -1,7 +1,6 @@
 ```sh
 # Software for WSL2
 sudo apt-get update && sudo apt-get install -y \
-  vim-gtk \
   tmux \
   git \
   gpg \
@@ -27,6 +26,17 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc \
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 # for WSL
 ln -sf ~/dotfiles/.vimrc_minimal ~/.vimrc
+# if vim does not work properly: remove it and compile from source
+sudo purge vim \
+  vim-gtk \
+  vim-gtk3
+  
+cd /usr/local/src
+sudo git clone https://github.com/vim/vim.git
+cd vim/src
+sudo make distclean  # if you build Vim before
+sudo make
+sudo make install
 
 # Install Plug for vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

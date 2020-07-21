@@ -72,11 +72,10 @@ nnoremap <Leader>l <C-w>l
 call plug#begin()
   Plug 'leafoftree/vim-vue-plugin'
   Plug 'jiangmiao/auto-pairs'
- 	Plug 'vim-airline/vim-airline'
- 	Plug 'scrooloose/nerdtree'
-  Plug 'valloric/youcompleteme'
- 	Plug 'scrooloose/syntastic'
-	Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'vim-airline/vim-airline'
+  Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/syntastic'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " NERDTree
