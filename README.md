@@ -13,6 +13,14 @@ sudo apt-get update && sudo apt-get install -y \
   python3-pip \
   net-tools 
 
+# enable systemd on wsl
+mkdir Downloads
+cd Downloads
+git clone https://github.com/DamionGans/ubuntu-wsl2-systemd-script.git
+cd ubuntu-wsl2-systemd-script/
+bash ubuntu-wsl2-systemd-script.sh
+# restart after all the process to load the changes
+
 # Create symlinks to various dotfiles
 # NOTE: The last one is WSL 1 / 2 specific. No need to do this on native Linux.
 ln -sf ~/dotfiles/.bashrc ~/.bashrc \
