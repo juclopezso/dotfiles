@@ -78,6 +78,16 @@ asdf global ruby 2.6.3
 ruby --version
 node --version
 
+# install postgres 11
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+sudo  apt update
+sudo apt install postgresql-11 libpq-dev
+# setup user
+sudo -u postgres createuser USER -s
+sudo -u postgres psql
+postgres=# \password USER
+
 # Check to make sure git is configured with your name, email and custom settings.
 git config --list
 
