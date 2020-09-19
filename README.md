@@ -37,7 +37,7 @@ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 # for WSL
 ln -sf ~/dotfiles/.vimrc_minimal ~/.vimrc
 # if vim does not work properly: remove it and compile from source
-sudo purge vim \
+sudo apt purge vim \
   vim-gtk \
   vim-gtk3
   
