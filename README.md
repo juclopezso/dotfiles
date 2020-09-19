@@ -21,6 +21,8 @@ cd ubuntu-wsl2-systemd-script/
 bash ubuntu-wsl2-systemd-script.sh
 # restart after all the process to load the changes
 
+# clone the repo
+git clone https://github.com/juclopezso/dotfiles.git
 # Create symlinks to various dotfiles
 # NOTE: The last one is WSL 1 / 2 specific. No need to do this on native Linux.
 ln -sf ~/dotfiles/.bashrc ~/.bashrc \
