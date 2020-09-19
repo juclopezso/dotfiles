@@ -56,6 +56,8 @@ cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
 # Install ASDF 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.8
 
+# explorer alias for wsl
+echo 'alias explorer="explorer.exe ."' >> ~/.bashrc
 # reload bashrc
 source .bashrc
 
