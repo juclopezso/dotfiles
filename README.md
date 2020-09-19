@@ -41,6 +41,8 @@ sudo apt purge vim \
   vim-gtk \
   vim-gtk3
   
+# install vim from source
+sudo apt-get install ncurses-dev
 cd /usr/local/src
 sudo git clone https://github.com/vim/vim.git
 cd vim/src
