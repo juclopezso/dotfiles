@@ -1,6 +1,7 @@
 [core]
 	editor = vim
 
+	autocrlf = false
 [color "diff"]
 	whitespace = red reverse
 
