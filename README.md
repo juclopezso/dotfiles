@@ -21,6 +21,8 @@ cd ubuntu-wsl2-systemd-script/
 bash ubuntu-wsl2-systemd-script.sh
 # restart after all the process to load the changes
 
+# clone the repo
+git clone https://github.com/juclopezso/dotfiles.git
 # Create symlinks to various dotfiles
 # NOTE: The last one is WSL 1 / 2 specific. No need to do this on native Linux.
 ln -sf ~/dotfiles/.bashrc ~/.bashrc \
@@ -35,10 +37,12 @@ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 # for WSL
 ln -sf ~/dotfiles/.vimrc_minimal ~/.vimrc
 # if vim does not work properly: remove it and compile from source
-sudo purge vim \
+sudo apt purge vim \
   vim-gtk \
   vim-gtk3
   
+# install vim from source
+sudo apt-get install ncurses-dev
 cd /usr/local/src
 sudo git clone https://github.com/vim/vim.git
 cd vim/src
@@ -56,6 +60,8 @@ cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
 # Install ASDF 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.8
 
+# explorer alias for wsl
+echo 'alias explorer="explorer.exe ."' >> ~/.bashrc
 # reload bashrc
 source .bashrc
 
