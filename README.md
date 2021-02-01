@@ -31,6 +31,7 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc \
 
 # Install and configure Hyper: (Above step 4) 
 # https://gist.github.com/leodutra/a6cebe11db5414cdaedc6e75ad194a00
+# Add or replace in hyper config: windowSize: [920, 680], fontSize: 14,
 
 # personal ~/.gitconfig.user file
 cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
@@ -72,6 +73,7 @@ sudo -u postgres createuser <USER> -s
 sudo -u postgres psql
 postgres=# \password <USER>
 
+# Install docker from: https://hub.docker.com/editions/community/docker-ce-desktop-windows/
 # If you're using Docker Desktop with WSL 2, these should be accessible too.
 docker info
 docker-compose --version
