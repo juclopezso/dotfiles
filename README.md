@@ -78,5 +78,31 @@ postgres=# \password <USER>
 docker info
 docker-compose --version
 
-
 ```
+
+Apps to install:
+- Brave
+- Libre Office
+- Logitech hub
+- VLC
+- Droid cam
+- Bitwarden
+- Unity (maybe)
+- Thunderbird
+- Steam
+- Yuzu
+
+Other Development frameworks and tools:
+- Wordpress
+- Vue
+- Quasar
+
+VS Code extensions:
+- Theme: Monokai
+- Bracket pair
+- Neovim or Vim
+- Gitlens
+- Live server
+- Prettier
+- Relative line numbers
+- Vetur
