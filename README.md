@@ -31,7 +31,8 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc \
 
 # Install and configure Hyper: (Above step 4) 
 # https://gist.github.com/leodutra/a6cebe11db5414cdaedc6e75ad194a00
-# Add or replace in hyper config: windowSize: [920, 680], fontSize: 14,
+# Install theme: hyper i hyper-material-theme, then inside plugins add "hyper-material-theme"
+# Add or replace in hyper config: windowSize: [920, 680], fontSize: 14, 
 
 # personal ~/.gitconfig.user file
 cp ~/dotfiles/.gitconfig.user ~/.gitconfig.user
