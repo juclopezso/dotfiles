@@ -87,7 +87,6 @@ Apps to install:
 - Logitech hub
 - VLC
 - Droid cam
-- Bitwarden
 - Unity (maybe)
 - Thunderbird
 - Steam
