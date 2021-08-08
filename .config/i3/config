@@ -246,9 +246,11 @@ smart_gaps on
 for_window [class="^.*"] border pixel 2
 
 # set image brackground. package feh
-exec feh --bg-fill /home/juancho/.config/i3/bg1.jpg
+exec --no-startup-id feh --bg-fill /home/juancho/.config/i3/bg1.jpg
+exec --no-startup-id redshift
+exec --no-startup-id optimus-manager-qt
 # set transparency. package picom
-exec picom -b -f # conf in /etc/xdg/picom.conf
+# exec --no-startup-id picom -b -f # conf in /etc/xdg/picom.conf
 # picom: inactive-opacity = 0.95; frame-opacity = 1;
 
 # set screens. package arander - tut: https://youtu.be/Bw5sDLOvN20 - min 40

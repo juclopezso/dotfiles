@@ -10,6 +10,9 @@ endif
 
 "regular settings
 "----------------
+" set leader key
+let mapleader=" "
+nnoremap <SPACE> <Nop>
 " ui
 set ruler
 set wildmenu
@@ -71,5 +74,33 @@ augroup END
 
 " mappings
 "----------
+" remap esc key
 :imap jj <Esc>
-
+" override Y yank  
+nnoremap Y y$
+" keep the cursor in the middle of the screen
+nnoremap n nzzzv
+nnoremap N Nzzzv
+" TODO: learn vim marks
+" nnoremap J mzJ`z
+" undo breakpoints
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ; ;<c-g>u
+inoremap : :<c-g>u
+inoremap [ [<c-g>u
+inoremap ] ]<c-g>u
+inoremap { {<c-g>u
+inoremap } }<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+" jumlist mutations (more than 5 lines)
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+" super smart moving lines
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+" inoremap <C-j> <esc>:m .+1<CR>==
+" inoremap <C-k> <esc>:m .-2<CR>==
+" nnoremap <leader>j :m .+1<CR>==
+" nnoremap <leader>k :m .-2<CR>==
