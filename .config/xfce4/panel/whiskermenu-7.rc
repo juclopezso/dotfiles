@@ -1,5 +1,5 @@
 favorites=arcolinux-welcome-app.desktop,arcolinux-tweak-tool.desktop,firefox.desktop,thunar.desktop,xfce4-terminal.desktop,conkyzen.desktop
-recent=xfce-session-settings.desktop,xfce4-power-manager-settings.desktop,pcmanfm.desktop,xfce4-file-manager.desktop,xfce-settings-manager.desktop,xfce-keyboard-settings.desktop,gparted.desktop,Alacritty.desktop,xfce4-terminal-emulator.desktop,brave-browser.desktop
+recent=xfce-settings-manager.desktop,xfce-session-settings.desktop,xfce4-power-manager-settings.desktop,pcmanfm.desktop,xfce4-file-manager.desktop,xfce-keyboard-settings.desktop,gparted.desktop,Alacritty.desktop,xfce4-terminal-emulator.desktop,brave-browser.desktop
 button-title=ArcoLinux\ \ 
 button-icon=start-here-arcolinux
 button-single-row=false
